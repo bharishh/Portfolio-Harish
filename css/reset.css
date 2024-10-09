@@ -1,0 +1,10 @@
+@import url("./main.css");
+
+
+:root 
+{
+    --nav-color:#AAA7A7;
+    --bg-color:rgb(255, 255, 255);
+    --text-color:#000000;
+
+}
