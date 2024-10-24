@@ -8,10 +8,6 @@
     --text-color:#000000;   
 }
 
-header{
-    position: relative;
-
-}
 
 nav
 {
@@ -20,43 +16,58 @@ nav
 position: relative;
 justify-content: space-between;    
 display: flex;
-width: 100%;
-height: 70px;
-left: 10px;
+width: 190rem;
+height: 80px;
 background: var(--nav-color);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 
 ul {
- position: absolute;
-right: 50px;
-top: 28px;
-font-family: 'Inter';
-font-weight: 700;
-font-size: 17px;
-line-height: 20px;
-color: var(--text-color);
-gap: 10rem;
-
-}
-
-ul li{
-display: inline; /* permet de mettre une liste sur une meme ligne */
-
-}
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    right: 70px;
+    top: 20px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
 
 
-a {
-text-decoration: none;
-color: inherit;
-}
+  }
 
+  ul li {
+    display: inline-table;
+    font-size: 1.6rem;
+    width: calc(30% / 3);
+    text-align: center;
+    line-height: 5rem;
+    text-transform: uppercase;
+  }
+  ul li > a {
+    color: var(--text-color);
+    display: block;
+    transition: 0.5s ease-in-out;
+  }
+  ul li > a:hover {
+    background: var(--bg-color);
+  }
 
 
 img{
 
-width: 7rem;
+width: 8rem;
 margin-left: 2rem;
 }
 
+.zoomIn figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.zoomIn figure:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
