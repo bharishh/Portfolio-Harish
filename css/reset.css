@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i");
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 
 
 html {
@@ -7,16 +15,11 @@ html {
   }
   
   body {
-    font: 1.6rem "Open Sans", sans-serif; /* serif default */
-    margin: 0;
-    background-color: var(--bg-color);
-    line-height: 1.6; /* interlignage */
-    letter-spacing: 0.2rem; /* 1px */
-    color: #ffffff;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100svh;
+    background-color: var(--bg-color);  
   }
+
+
+
   h1,
   h2,
   h3,
@@ -26,9 +29,7 @@ html {
     font-weight: normal;
   }
   
-  * {
-    box-sizing: border-box;
-  }
+ 
   img {
     display: inline-block;
   }
