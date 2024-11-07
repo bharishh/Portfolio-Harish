@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+
 }
 
 
@@ -16,6 +17,8 @@ html {
   
   body {
     background-color: var(--bg-color);  
+    color: var(--text-color);
+ 
   }
 
 
