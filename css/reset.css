@@ -16,6 +16,9 @@ html {
   }
   
   body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100svh;
     background-color: var(--bg-color);  
     color: var(--text-color);
  
