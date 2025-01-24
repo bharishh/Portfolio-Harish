@@ -88,11 +88,19 @@ footer * {
   font-size: 15px;
 }
 
+.h1Projet
+{
+  text-align: center;
+}
 
+.projet{
+
+  font-size: 17px;
+
+}
 
 
 /* KEYFRAME ANIMATION */
-
 @keyframes defilRight
 {
   100%{
