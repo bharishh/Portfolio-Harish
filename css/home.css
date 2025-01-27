@@ -100,7 +100,7 @@
 
 .home-icon{
   position: absolute;
-  bottom: 40px;
+  bottom: 27rem;
   width: 170px;
   display: flex;
   justify-content: space-between;
@@ -110,8 +110,8 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   background: transparent;
   border: 2px solid var(--h3-color);
   border-radius: 50%;
