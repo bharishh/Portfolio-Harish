@@ -7,6 +7,7 @@
 {
     --nav-color:#AAA7A7;
     --bg-color:rgb(53, 64, 90);
+    --h3-color : rgb(96, 145, 239);
     --text-color:#ffffff;   
 }
 .header
@@ -79,9 +80,68 @@
 
 .homeContaints
 {
- 
+ max-width: 600px ;
   font-size: 20px;
 }
+.homeContaints h1{
+  font-size: 56px;
+  font-weight: 700;
+
+}
+.homeContaints h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--h3-color);
+}
+
+.homeContaints p {
+  font-size: 16px;
+}
+
+.home-icon{
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+.home-icon a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid var(--h3-color);
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--h3-color);
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.home-icon a:hover{
+  color: black;
+}
+.home-icon a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+  transition: .5s;
+  background: var(--h3-color);
+
+}
+.home-icon a:hover::before {
+  width: 100%;
+
+}
+
 
 footer * {
   text-align: center;
