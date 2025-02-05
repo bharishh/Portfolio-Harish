@@ -1,0 +1,133 @@
+@import url("./reset.css");
+:root
+{
+    --nav-color:#AAA7A7;
+    --bg-color:rgb(53, 64, 90);
+    --h3-color : rgb(96, 145, 239);
+    --text-color:#ffffff;
+}
+
+
+.header
+{
+        position: fixed;
+    top : 0;
+    left : 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo
+{
+    position: relative;
+    font-size: 25px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.logo::before
+{
+    content: '';
+    position: absolute;
+    background: var(--bg-color);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation: defilRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+
+.navbar a
+{
+    font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .2s;
+}
+
+
+.navbar a:hover,
+.navbar a.active
+{
+    color: var(--nav-color);
+
+}
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20% 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 15px;
+}
+
+.project-title {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.project-description {
+    font-size: 1em;
+    color: #666;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+}
+
+/* KEYFRAME ANIMATION */
+@keyframes defilRight
+{
+    100%{
+        width: 0;
+
+    }
+}

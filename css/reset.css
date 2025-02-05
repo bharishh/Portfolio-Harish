@@ -12,14 +12,13 @@
 
 html {
     /* selecteur css | propriété | valeur */
-    font-size: 62.5%;
+    font-size: 100.5%;
   }
-  
+
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
   }
-
 
 
   h1,
