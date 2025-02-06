@@ -19,7 +19,9 @@ html {
     background-color: var(--bg-color);
     color: var(--text-color);
   }
-
+  main{
+    height: 100vh;
+  }
 
   h1,
   h2,

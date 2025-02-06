@@ -68,7 +68,7 @@
 
 .home
 {
-  height: 100vh;
+  height: 97vh;
   display: flex;
   align-items: center;
   padding: 0 10%;
@@ -95,7 +95,7 @@
 
 .home-icon{
   position: absolute;
-  bottom: 27rem;
+  bottom: 17rem;
   width: 170px;
   display: flex;
   justify-content: space-between;
@@ -140,18 +140,6 @@
 
 footer * {
   text-align: center;
-  font-size: 15px;
-}
-
-.h1Projet
-{
-  text-align: center;
-}
-
-.projet{
-
-  font-size: 17px;
-
 }
 
 
