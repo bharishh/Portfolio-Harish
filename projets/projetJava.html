@@ -10,27 +10,39 @@
 </head>
 <body>
 <main>
-    <div class ="consoleE5">
-        <h1>M2L - Application de Gestion du Personnel</h1>
-        <img src="/asset/consoleProjetE5.png" alt="Projet 3">
-        <h3>Descritpion : </h3>git
-        <p></p>
-    </div>
-    <div>
+    <h1>M2L - Application de Gestion du Personnel</h1>
+    
+<div class="projet">
 
-        <img src="https://via.placeholder.com/300x200" alt="Projet 3">
-
-        <h3>Descritpion : </h3>
-        <p></p>
-    </div>
-    <div>
-
-        <img src="https://via.placeholder.com/300x200" alt="Projet 3">
-
-        <h3>Descritpion : </h3>
-        <p></p>
+    <div class="mcdE5">
+        <img src="/asset/MCDProjetE5.png" alt="Projet 3" class="zoomable">
+        <h3>Description :</h3>
+        <p class="description">Texte de description ici.</p>
     </div>
 
+    <div class="arbreE5">
+        <img src="/asset/arbreHeuristique.png" alt="Projet 3" class="zoomable">
+        <h3>Description :</h3>
+        <p>Texte de description ici.</p>
+    </div>
+
+    <div class="consoleE5">
+        <img src="/asset/consoleProjetE5.png" alt="Projet 3" class="zoomable">
+        <h3>Description :</h3>
+        <p>Texte de description ici.</p>
+    </div> 
+
+</div>
+
+</main>
+
+<!-- Conteneur pour afficher l'image zoomée -->
+<div id="zoomContainer">
+    <span id="closeZoom">&times;</span>
+    <img id="zoomedImage" src="" alt="Zoomed">
+</div>
+
+<script src="/js/imgConsole.js"></script>
 
 </main>
 

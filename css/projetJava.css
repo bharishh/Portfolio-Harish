@@ -1,10 +1,121 @@
 @import url("./reset.css");
 
-
 :root
 {
     --nav-color:#AAA7A7;
     --bg-color:rgb(53, 64, 90);
     --h3-color : rgb(96, 145, 239);
     --text-color:#ffffff;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+.mcdE5{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mcdE5 img{
+    display: inline-block;
+    width:200px;
+    margin: 20px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.mcdE5 img:active{
+    transform: scale(1.5);
+}
+
+.description{
+    flex: 1;
+}
+
+
+/* Style pour le conteneur de zoom */
+#zoomContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Image zoomée */
+#zoomedImage {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Bouton de fermeture */
+#closeZoom {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+.consoleE5{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.consoleE5 img{
+    display: inline-block;
+    width:600px;
+    margin: 30px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.consoleE5 img:active{
+    transform: scale(1.5);
+}
+
+.description{
+    flex: 1console
+}
+
+.arbreE5{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arbreE5 img{
+    display: inline-block;
+    width:400px;
+    margin: 20px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.arbreE5 img:active{
+    transform: scale(1.5);
+}
+
+.description{
+    flex: 1console
 }
