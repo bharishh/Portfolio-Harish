@@ -10,7 +10,7 @@
 
 .header
 {
-        position: fixed;
+    position: fixed;
     top : 0;
     left : 0;
     width: 100%;
@@ -130,4 +130,8 @@ h1 {
         width: 0;
 
     }
+}
+
+footer * {
+    text-align: center;
 }

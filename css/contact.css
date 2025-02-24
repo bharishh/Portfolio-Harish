@@ -1,0 +1,60 @@
+@import url("./reset.css");
+
+:root
+{
+    --nav-color:#AAA7A7;
+    --bg-color:rgb(53, 64, 90);
+    --h3-color : rgb(96, 145, 239);
+    --text-color:#ffffff;
+}
+header {
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: var(--text-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input, textarea {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.7em;
+    background-color: var(--bg-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: var(--h3-color);
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
