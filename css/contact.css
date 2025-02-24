@@ -7,18 +7,66 @@
     --h3-color : rgb(96, 145, 239);
     --text-color:#ffffff;
 }
-header {
-    padding: 1em 0;
-    text-align: center;
+.header
+{
+    position: fixed;
+    top : 0;
+    left : 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo
+{
+    position: relative;
+    font-size: 25px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.logo::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation: defilRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+
+.navbar a
+{
+    font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .2s;
+}
+
+
+.navbar a:hover,
+.navbar a.active
+{
+    color: var(--nav-color);
+
 }
 
 main {
     max-width: 600px;
     height: 45vh;
-    margin: 2em auto;
+    margin: 30vh auto 2em auto;
     padding: 1em;
     background-color: var(--text-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 3);
 }
 
 form {

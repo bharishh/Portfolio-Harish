@@ -13,26 +13,38 @@
     <title>Portfolio ~ Harish </title>
 </head>
 <body>
-<header>
-    <h1>Contactez-moi !</h1>
+
+<header class="header">
+    <a href="index.html"  class="logo"> Harish B.</a>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="projets.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="about.html">About</a>
+    </nav>
 </header>
+
 <main>
-    <form action="" method="post" enctype="text/plain">
+    <div class="form">
+        <form action="" method="post" enctype="text/plain">
 
             <label for="name"> Nom</label>
-            <input type="text" id="name"  name="name" placeholder="nom">
+            <input type="text" id="name"  name="name" required placeholder="nom">
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="email">
+            <input type="email" id="email" name="email" required  placeholder="email">
 
             <label for="subject">Sujet : </label>
-            <input type="text" id="subject" name="subject" placeholder="sujet">
+            <input type="text" id="subject" name="subject" required placeholder="sujet">
 
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="6" required placeholder="message"></textarea>
 
-        <button type="submit">Envoyer</button>
-    </form>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
 </main>
 
 <footer>

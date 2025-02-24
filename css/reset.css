@@ -15,9 +15,11 @@ html {
     font-size: 100.5%;
   }
 
-  body {
+  body{
     background-color: var(--bg-color);
     color: var(--text-color);
+    height: 100%;
+
   }
 
 
