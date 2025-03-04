@@ -23,7 +23,7 @@ Merci de visiter mon portfolio ! N'hésitez pas à me contacter pour toute quest
 
 © 2025 B.Harish
 
-### Pour Consulter ma page [ici](https://bharishh.github.io/Portfolio-Harish/)
+### Consulter mon portfolio [ici](https://bharishh.github.io/Portfolio-Harish/)
 
 
 
