@@ -24,33 +24,41 @@ h1 {
 }
 
 .objectiveProjet p {
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
-.mcdE5{
+
+.projet{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    text-align: center;
 }
 
-.mcdE5 img{
-    display: inline-block;
-    width:200px;
-    margin: 20px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-
-}
-
-.mcdE5 img:active{
-    transform: scale(1.5);
-}
-
-.description{
+.projet-img{
+    display: flex;
     flex: 1;
+    margin:10px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.projet-img img{
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 
+.projet-img p{
+    margin-top: 10px;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.projet-img img:active {
+    transform: scale(1.2);
+}
 
 /* Style pour le conteneur de zoom */
 #zoomContainer {
@@ -85,55 +93,6 @@ h1 {
     font-weight: bold;
 }
 
-
-
-.consoleE5{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.consoleE5 img{
-    display: inline-block;
-    width:600px;
-    margin: 30px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-
-}
-
-.consoleE5 img:active{
-    transform: scale(1.5);
-}
-
-.description{
-    flex: 1;
-}
-
-.arbreE5{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.arbreE5 img{
-    display: inline-block;
-    width:400px;
-    margin: 20px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-
-}
-
-.arbreE5 img:active{
-    transform: scale(1.5);
-}
-
-.description{
-    flex: 1;
-}
 
 .modifications-list {
     list-style-type: none;
