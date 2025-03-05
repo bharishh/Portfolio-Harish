@@ -61,11 +61,11 @@
 }
 
 main {
-    max-width: 600px;
-    height: 45vh;
-    margin: 30vh auto 2em auto;
+    max-width: 650px;
+    height: 55vh;
+    margin: 20vh auto 2em auto;
     padding: 1em;
-    background-color: var(--text-color);
+    background-color: var(--nav-color);
     box-shadow: 0 0 20px rgba(0, 0, 0, 3);
 }
 
@@ -75,7 +75,7 @@ form {
 }
 
 label {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     font-weight: bold;
 }
 
