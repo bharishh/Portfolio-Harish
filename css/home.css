@@ -64,10 +64,9 @@
   color: var(--nav-color);
 
 }
-
-
 .home
 {
+  position: relative;
   height: 97vh;
   display: flex;
   align-items: center;
@@ -95,9 +94,10 @@
 
 .monImage {
   position: absolute;
-  top: 0;
-  left: 0;
-  inset: 280px;
+  top: 30%;
+  right: 10%;
+  width: 100px;
+  height: 350px;
   display: flex;
   align-items: end;
   flex-direction: column;
@@ -105,9 +105,6 @@
 .monImage img{
   height: 100%;
 }
-
-
-
 
 
 .home-icon{
@@ -166,5 +163,24 @@ footer * {
   100%{
     width: 0;
 
+  }
+}
+
+@media screen and (max-width: 500px){
+
+  .home{
+    margin-top: 50%;
+    display: block;
+  }
+
+  .home-icon{
+    top: 30%;
+  }
+
+  .monImage{
+    top: 40%;
+    right: 10%;
+    width: 100px;
+    height: 350px;
   }
 }
