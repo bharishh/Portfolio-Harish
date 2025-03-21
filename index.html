@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/home.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Portfolio ~ Harish </title>
@@ -15,14 +16,14 @@
 
 <body>
     
- <header class="header"> 
+ <header class="header" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
          <a href="index.html"  class="logo"> Harish B.</a>
    
 <nav class="navbar">
         <a href="#" class="active">Home</a>
+        <a href="about.html">About</a>
         <a href="projets.html">Projects</a>
         <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
 </nav>
 </header>
 
@@ -30,15 +31,15 @@
 <main>
 
 <section class="home">
-        <div class="homeContaints">
+        <div class="homeContaints" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
                 <h1> Harish Balakirishnan </h1>
                 <h3> Développeur back-end</h3>
                 <p>Créer des solutions fiables et optimisées pour des applications web performantes</p>
         </div>
-            <div class="monImage">
+            <div class="monImage" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
                 <img src="asset/harish.jpeg" alt="">
             </div>
-    <div class="home-icon">
+    <div class="home-icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
         <a href="https://www.linkedin.com/in/harish-balakirishnan-20aa38211/"><i class='bx bxl-linkedin-square' ></i></a>
         <a href="https://github.com/bharishh"><i class='bx bxl-github' ></i></a>
         <a href="https://www.instagram.com/harishh.3"><i class='bx bxl-instagram'></i></a>
@@ -51,6 +52,10 @@
 </footer>
 
 </main>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>
+     AOS.init();
+ </script>
 </body>
 </html>
 
