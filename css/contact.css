@@ -69,8 +69,7 @@ section h1{
 
 .home-icon{
     position: absolute;
-    bottom: 20rem;
-    width: 80%;
+    width: 50%;
     margin: auto 10rem;
     top: 40%;
     display: flex;
@@ -82,12 +81,12 @@ section h1{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
+    width: 70px;
+    height: 70px;
     background: transparent;
     border: 2px solid var(--h3-color);
-    border-radius: 50%;
-    font-size: 20px;
+    border-radius: 70%;
+    font-size: 40px;
     color: var(--h3-color);
     text-decoration: none;
     z-index: 1;
