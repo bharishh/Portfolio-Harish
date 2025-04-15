@@ -3,7 +3,7 @@
 
 :root
 {
-    --nav-color:#AAA7A7;
+    --nav-color: #bfbaba;
     --bg-color:rgb(53, 64, 90);
     --text-color:#ffffff;
 }
@@ -62,10 +62,20 @@
 }
 
 .intro {
-    padding-top: 15rem;
-    padding-left: 3rem;
+    width: 80%;
+    height: 40vh;
+    position: relative;
+    justify-content: space-between;
+    margin: 6% auto 0;
+}
+.intro h1 {
+    font-family: 'Proxima Nova Cn Rg', serif;
+    font-size: 4rem;
 }
 
-.competence{
-    padding-top: 60px;
+.intro h2 {
+    font-weight:400;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--nav-color);
 }
