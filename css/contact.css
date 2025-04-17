@@ -60,11 +60,13 @@
 
 }
 
+
 section h1{
     position: absolute;
-    top:13%;
-    left: 40%;
-    font-size: 2.5rem;
+    top: 11rem;
+    left: 10rem;
+    font-size: 2rem;
+
 }
 .home-icon{
     position: absolute;
@@ -118,7 +120,16 @@ section h1{
 .home-icon a:hover::before {
     width: 100%;
 }
+.linkedin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
 
+.linkedin p {
+    font-size: 1.3rem;
+}
 footer {
     text-align: center;
     padding: 1em 0;
