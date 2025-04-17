@@ -86,7 +86,7 @@
     height: 25vh;
     position: relative;
     justify-content: space-between;
-    margin: 4% auto 0;
+    margin: 3% auto 0;
 }
 
 .parcours h2
@@ -103,21 +103,32 @@
 
 
 .stage {
-    background: #666666;
+    width: 80%;
+    height: 40vh;
+    position: relative;
+    justify-content: space-between;
+    margin: 3% auto 0;
 }
 .stage h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-family: 'Proxima Nova Cn Rg', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .stage .stage-card
 {
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    color: var(--nav-color);
 }
+
 
 .item-title {
     font-size: 18px;
     margin-bottom: 5px;
+}
+.clr-text {
+    color: var(--text-color);
 }
 
 .item-date {
@@ -126,4 +137,8 @@
 
 .item-description {
     margin-bottom: 10px;
+}
+
+footer * {
+    text-align: center;
 }
