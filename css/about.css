@@ -63,10 +63,10 @@
 
 .intro {
     width: 80%;
-    height: 40vh;
+    height: 25vh;
     position: relative;
     justify-content: space-between;
-    margin: 6% auto 0;
+    margin: 7% auto 0;
 }
 .intro h1 {
     font-family: 'Proxima Nova Cn Rg', serif;
@@ -75,7 +75,55 @@
 
 .intro h2 {
     font-weight:400;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     font-size: 1rem;
     color: var(--nav-color);
+}
+
+.parcours
+{
+    width: 80%;
+    height: 25vh;
+    position: relative;
+    justify-content: space-between;
+    margin: 4% auto 0;
+}
+
+.parcours h2
+{
+    font-family: 'Proxima Nova Cn Rg', serif;
+    font-size: 2rem;
+}
+
+.parcours p {
+    margin-top: 1.5rem;
+    color: var(--nav-color);
+    line-height: 1.5rem;
+}
+
+
+.stage {
+    background: #666666;
+}
+.stage h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stage .stage-card
+{
+    margin-bottom: 20px;
+}
+
+.item-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.item-date {
+    margin-bottom: 5px;
+}
+
+.item-description {
+    margin-bottom: 10px;
 }
