@@ -104,7 +104,7 @@
 
 .stage {
     width: 80%;
-    height: 40vh;
+    height: 30vh;
     position: relative;
     justify-content: space-between;
     margin: 3% auto 0;
@@ -122,6 +122,23 @@
     color: var(--nav-color);
 }
 
+
+.stage h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.mission {
+
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7rem;
+    color: var(--nav-color);
+}
+
+.competence {
+
+}
 
 .item-title {
     font-size: 18px;
