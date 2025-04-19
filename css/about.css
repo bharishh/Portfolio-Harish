@@ -63,7 +63,7 @@
 
 .intro {
     width: 80%;
-    height: 25vh;
+    height: 15vh;
     position: relative;
     justify-content: space-between;
     margin: 7% auto 0;
@@ -83,7 +83,7 @@
 .parcours
 {
     width: 80%;
-    height: 25vh;
+    height: 15vh;
     position: relative;
     justify-content: space-between;
     margin: 3% auto 0;
@@ -104,7 +104,7 @@
 
 .stage {
     width: 80%;
-    height: 30vh;
+    height: 40vh;
     position: relative;
     justify-content: space-between;
     margin: 3% auto 0;
