@@ -104,10 +104,11 @@
 
 .stage {
     width: 80%;
-    height: 45vh;
+    height: 53vh;
     position: relative;
     justify-content: space-between;
     margin: 4% auto 0;
+
 }
 
 .stage-container{
@@ -135,6 +136,7 @@
 
 .stage h4 {
     margin-bottom: 1.5rem;
+    margin-top: 1.3rem;
     font-size: 1.1rem;
 }
 
@@ -170,4 +172,5 @@
 
 footer * {
     text-align: center;
+
 }
