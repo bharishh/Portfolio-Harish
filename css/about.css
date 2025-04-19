@@ -83,10 +83,10 @@
 .parcours
 {
     width: 80%;
-    height: 15vh;
+    height: 20vh;
     position: relative;
     justify-content: space-between;
-    margin: 3% auto 0;
+    margin: 6% auto 0;
 }
 
 .parcours h2
@@ -104,11 +104,18 @@
 
 .stage {
     width: 80%;
-    height: 40vh;
+    height: 45vh;
     position: relative;
     justify-content: space-between;
-    margin: 3% auto 0;
+    margin: 4% auto 0;
 }
+
+.stage-container{
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+}
+
 .stage h2 {
     font-family: 'Proxima Nova Cn Rg', serif;
     font-size: 2rem;
@@ -117,8 +124,11 @@
 
 .stage .stage-card
 {
+    width: 48%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 8px;
     margin-bottom: 1.5rem;
-    margin-left: 2rem;
     color: var(--nav-color);
 }
 
@@ -137,7 +147,9 @@
 }
 
 .competence {
-
+    margin-left: 3rem;
+    line-height: 1.7rem;
+    color: var(--nav-color);
 }
 
 .item-title {
