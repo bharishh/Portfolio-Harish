@@ -6,6 +6,8 @@
     --nav-color: #bfbaba;
     --bg-color:rgb(53, 64, 90);
     --text-color:#ffffff;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --primary-light: #3b82f6;
 }
 .header
 {
@@ -92,13 +94,16 @@
 .parcours h2
 {
     font-family: 'Proxima Nova Cn Rg', serif;
-    font-size: 2rem;
+    font-size: 1.875rem;
 }
 
 .parcours p {
     margin-top: 1.5rem;
     color: var(--nav-color);
-    line-height: 1.5rem;
+    line-height: 1.7rem;
+}
+.parcours p a {
+    color: white;
 }
 
 
@@ -119,7 +124,7 @@
 
 .stage h2 {
     font-family: 'Proxima Nova Cn Rg', serif;
-    font-size: 2rem;
+    font-size: 1.875rem;
     margin-bottom: 1.5rem;
 }
 
@@ -138,6 +143,7 @@
     margin-bottom: 1.5rem;
     margin-top: 1.3rem;
     font-size: 1.1rem;
+    color: var(--text-color);
 }
 
 .mission {
@@ -157,6 +163,7 @@
 .item-title {
     font-size: 18px;
     margin-bottom: 5px;
+    color: var(--text-color);
 }
 .clr-text {
     color: var(--text-color);
@@ -168,6 +175,76 @@
 
 .item-description {
     margin-bottom: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: 4% auto 0;
+}
+
+.formation{
+
+    margin-bottom: 5rem;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    font-family: 'Proxima Nova Cn Rg', serif;
+    margin-bottom: 1.5rem;
+
+}
+
+.h2-title{
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+}
+
+.formation-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    color: var(--bg-color);
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: var(--card-shadow);
+    height: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    padding: 1.5rem 1.5rem 0;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.card-subtitle.school {
+    font-weight: 500;
+}
+
+.card-subtitle.period {
+    color: var(--primary-light);
+    font-weight: 600;
 }
 
 footer * {
