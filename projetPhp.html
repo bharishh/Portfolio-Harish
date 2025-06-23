@@ -9,13 +9,92 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
-    <link rel="stylesheet" href="css/projetjava.css">
+    <link rel="stylesheet" href="css/projetPHP.css">
     <title>Projet PHP-E6</title>
 </head>
 
 <body>
 <main>
+    <div class="container">
+        <h1>Documentation du Projet : Intranet "Maison des Ligues"</h1>
 
+        <section>
+            <h2>1. Introduction au Projet</h2>
+            <p>Ce projet consiste en le développement d'une plateforme Intranet pour une société de taille moyenne en pleine expansion, la "Maison des Ligues". L'objectif principal est de faciliter et d'encourager les relations entre collaborateurs en interne, suite au récent recrutement de nombreux nouveaux membres.</p>
+            <p>En tant que développeur Front-End, la tâche a été de prototyper et développer la partie frontale de cette plateforme Intranet.</p>
+        </section>
+
+        <section>
+            <h2>2. Stack Technique</h2>
+            <p>Le projet est développé en utilisant les technologies suivantes pour la partie front-end:</p>
+            <ul>
+                <li><strong>HTML</strong> </li>
+                <li><strong>CSS</strong> </li>
+                <li><strong>PHP Laravel</strong> </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Fonctionnalités de la Plateforme</h2>
+            <p>La plateforme offre différentes fonctionnalités selon le type d'utilisateur :</p>
+
+            <h3>3.1. Utilisateur Standard (Collaborateur)</h3>
+            <p>Un collaborateur standard dispose des fonctionnalités suivantes :</p>
+            <ul>
+                <li><strong>Connexion au Système</strong> : Accès via son login et mot de passe.</li>
+                <li><strong>Page d'Accueil Personnalisée</strong> : Après connexion, l'utilisateur est dirigé vers une page d'accueil lui présentant un de ses collaborateurs au hasard.</li>
+                <li><strong>Découverte de Collaborateurs</strong> : Un bouton "Dire bonjour à quelqu'un d'autre" permet d'afficher un autre collaborateur au hasard.</li>
+                <li><strong>Liste des Collaborateurs</strong> : L'utilisateur peut se déplacer sur la page de Liste des collaborateurs de la société via le menu. Les collaborateurs s'affichent sous forme de fiches, avec toutes leurs caractéristiques.</li>
+                <li><strong>Filtrage et Recherche</strong> : La page de liste doit également permettre un affichage avec un système de filtres par nom, localisation (ville/pays) et catégorie.</li>
+                <li><strong>Modification du Profil Personnel</strong> : L'utilisateur peut accéder à une page de modification de ses informations personnelles (incluant le login/mot de passe) en cliquant sur son image de profil dans le header.</li>
+                <li><strong>Déconnexion</strong> : L'utilisateur peut se déconnecter, après quoi les pages précédentes (accueil, liste) ne sont plus accessibles.</li>
+            </ul>
+
+            <h3>3.2. Administrateur</h3>
+            <p>L'administrateur est un utilisateur standard, disposant de privilèges supplémentaires. Il peut:</p>
+            <ul>
+                <li><strong>Ajouter un nouveau collaborateur</strong>.</li>
+                <li><strong>Modifier un collaborateur existant</strong>.</li>
+                <li><strong>Supprimer un collaborateur existant</strong>.</li>
+            </ul>
+            <p>Des éléments spécifiques pour l'administrateur incluent :</p>
+            <ul>
+                <li>Accès à un lien pour "Ajouter" un nouveau collaborateur dans sa barre de menu.</li>
+                <li>L'affichage d'une fiche d'un utilisateur lui propose 2 boutons supplémentaires "Éditer" et "Supprimer".</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Modèle Conceptuel de Données (MCD)</h2>
+            <p>Le cœur de la plateforme repose sur une table de "collaborateurs" (qui correspond au modèle `User` dans le code Laravel). Voici les attributs principaux de cette table :</p>
+            <ul>
+                <li><strong>`phone`</strong> : Numéro de la ligne directe.</li>
+                <li><strong>`birthdate`</strong> : Date de naissance.</li>
+                <li><strong>`city`</strong> : Ville où le collaborateur travaille.</li>
+                <li><strong>`country`</strong> : Pays où le collaborateur travaille.</li>
+                <li><strong>`photo`</strong> : Une URL valide vers une image en ligne.</li>
+                <li><strong>`service`</strong> : Service dans lequel travaille le collaborateur ("Marketing", "Client", etc.).</li>
+                <li><strong>`isAdmin`</strong> : Un booléen indiquant si le collaborateur est administrateur de la plateforme.</li>
+            </ul>
+            <p>Pour les tests, le seul administrateur du set par défaut est `admin@example.com` avec le mot de passe `password`.</p>
+
+            <div class="image-placeholder">
+                <h3>MCD</h3>
+                <img src="asset/mcdlLaravel.png" alt="Modèle Conceptuel de Données" style="max-width: 100%; height: auto; display: block; margin: 15px auto;">
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Contraintes Techniques et Gestion du Projet</h2>
+            <p>Le projet a été développé en respectant les bonnes pratiques de gestion de version :</p>
+            <ul>
+                <li>Vous veillerez à travailler avec Git.</li>
+                <li>Le travail effectué tout au long de la semaine via des commits réguliers et correctement titrés.</li>
+            </ul>
+            <p>Le code source du projet est disponible publiquement sur un repository GitHub :</p>
+            <p><a href="https://github.com/bharishh/Projet-M2l" target="_blank">Dépôt GitHub du Projet Maison des Ligues</a></p>
+        </section>
+    </div>
 </main>
 
 </body>
