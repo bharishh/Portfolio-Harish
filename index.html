@@ -3,59 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio Harish">
+    <meta name="description" content="Portfolio Harish Balakirishnan — Développeur back-end">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/home.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Portfolio ~ Harish </title>
+    <link rel="stylesheet" href="css/home.css">
+    <title>Portfolio ~ Harish B.</title>
 </head>
-
 <body>
-    
- <header class="header" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
-         <a href="index.html"  class="logo"> Harish B.</a>
-   
-<nav class="navbar">
-        <a href="#" class="active">Home</a>
-        <a href="about.html">About</a>
+
+<!-- Grille de fond décorative -->
+<div class="fond-grille" aria-hidden="true"></div>
+
+<!-- En-tête -->
+<header class="entete" id="entete">
+    <a href="index.html" class="logo">Harish<span>.</span></a>
+    <nav class="barre-nav">
+        <a href="index.html" class="actif">Home</a>
+        <a href="apropos.html">About</a>
         <a href="projets.html">Projects</a>
         <a href="contact.html">Contact</a>
-</nav>
-
+    </nav>
 </header>
 
-
 <main>
-<section class="home">
-            <div class="homeContaints" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
-                <h1> Harish Balakirishnan </h1>
-                <h3> Développeur back-end</h3>
-                <p>Créer des solutions fiables et optimisées pour des applications web performantes</p>
-        </div>
-            <div class="monImage" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">
-                <img src="asset/harish.jpeg" alt="">
-            </div>
-    <div class="home-icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
-        <a href="https://www.linkedin.com/in/harish-balakirishnan-20aa38211/" target="_blank" ><i class='bx bxl-linkedin-square' ></i></a>
-        <a href="https://github.com/bharishh" target="_blank" ><i class='bx bxl-github' ></i></a>
-        <a href="https://www.instagram.com/harishh.3" target="_blank" ><i class='bx bxl-instagram'></i></a>
-    </div>
-</section>
+    <section class="section-accueil">
 
+        <!-- Contenu texte -->
+        <div class="contenu-accueil">
+            <span class="etiquette-accueil">Disponible pour Alternance</span>
+
+            <h1 class="titre-accueil">
+                Harish<br>
+                <span class="surbrillance" id="texte-anime">Balakirishnan</span><span class="curseur"></span>
+            </h1>
+
+            <p class="sous-titre-accueil">Développeur Back-End &amp; Full Stack</p>
+
+            <p class="description-accueil">
+                Passionné par la création d'architectures logicielles robustes et
+                performantes. BACHELOR CDA — ITIC Paris, promotion 2026.
+            </p>
+
+            <div class="groupe-boutons">
+                <a href="projets.html" class="btn-principal">
+                    Voir mes projets <i class='bx bx-right-arrow-alt'></i>
+                </a>
+                <a href="contact.html" class="btn-secondaire">
+                    Me contacter
+                </a>
+            </div>
+
+            <div class="icones-sociales">
+                <a href="https://www.linkedin.com/in/harish-balakirishnan-20aa38211/" target="_blank" class="icone-sociale" aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin-square'></i>
+                </a>
+                <a href="https://github.com/bharishh" target="_blank" class="icone-sociale" aria-label="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://www.instagram.com/_harish930" target="_blank" class="icone-sociale" aria-label="Instagram">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Photo profil -->
+        <div class="conteneur-photo">
+            <div class="cadre-photo">
+                <img src="asset/harish.jpeg" alt="Harish Balakirishnan" class="photo-profil">
+            </div>
+        </div>
+
+        <!-- Indicateur de défilement -->
+        <div class="indicateur-defilement">
+            <span>Défiler</span>
+            <div class="fleche-bas"></div>
+        </div>
+
+    </section>
 
     <footer>
-        <p>&COPY; Portfolio Harish - Balakirishnan</p>
+        <p>&copy; Portfolio Harish Balakirishnan</p>
     </footer>
 </main>
 
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
- <script>
-     AOS.init();
- </script>
+<script>
+    // En-tête au défilement
+    const entete = document.getElementById('entete');
+    window.addEventListener('scroll', () => {
+        entete.classList.toggle('defilée', window.scrollY > 30);
+    });
+
+    // Animation d'apparition au scroll
+    const observateur = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add('visible');
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.apparition, .apparition-gauche, .apparition-droite')
+        .forEach(el => observateur.observe(el));
+</script>
 </body>
 </html>
-

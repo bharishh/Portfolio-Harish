@@ -1,35 +1,122 @@
-
-*
-{
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-
-
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 html {
-    /* selecteur css | propriété | valeur */
-    font-size: 100.5%;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+p, figure {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Variables globales */
+:root {
+  --couleur-fond: #0D1117;
+  --couleur-surface: #161B22;
+  --couleur-bordure: #21262D;
+  --couleur-accent: #4F8EF7;
+  --couleur-accent-violet: #A78BFA;
+  --couleur-texte: #E6EDF3;
+  --couleur-texte-subtil: #8B949E;
+  --couleur-succes: #3FB950;
+  --nav-couleur: #8B949E;
+  --ombre-carte: 0 4px 24px rgba(0,0,0,0.4);
+  --rayon: 12px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Utilitaires d'animation */
+.apparition {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s var(--transition), transform 0.7s var(--transition);
+}
+
+.apparition.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.apparition-gauche {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s var(--transition), transform 0.7s var(--transition);
+}
+
+.apparition-gauche.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.apparition-droite {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s var(--transition), transform 0.7s var(--transition);
+}
+
+.apparition-droite.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Délais d'animation */
+.delai-1 { transition-delay: 0.1s; }
+.delai-2 { transition-delay: 0.2s; }
+.delai-3 { transition-delay: 0.3s; }
+.delai-4 { transition-delay: 0.4s; }
+.delai-5 { transition-delay: 0.5s; }
+
+/* Scrollbar stylisée */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--couleur-fond); }
+::-webkit-scrollbar-thumb { background: var(--couleur-accent); border-radius: 3px; }
+
+/* Réduction du mouvement */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
-
-  body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
-
-
-  }
-
-
-  h1,
-  h2,
-  h3,
-  figure,
-  p {
-    margin: 0;
-    font-weight: normal;
-  }
-  
+}
