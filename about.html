@@ -1,163 +1,148 @@
-<!doctype html> 
-    <html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Portfolio Harish">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="À propos — Harish Balakirishnan">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
     <link rel="stylesheet" href="css/about.css">
-    <title>About</title>
+    <title>About ~ Harish B.</title>
 </head>
 <body>
-<header class="header">
-    <a href="index.html"  class="logo"> Harish B.</a>
 
-    <nav class="navbar">
+<header class="entete">
+    <a href="index.html" class="logo">Harish<span>.</span></a>
+    <nav class="barre-nav">
         <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
+        <a href="apropos.html" class="actif">About</a>
         <a href="projets.html">Projects</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
+
 <main>
-    <section class="intro">
-      <h1>A propos</h1>
-        <h2>Je suis Développeur full stack en 2e année BTS SLAM à ITIC Paris</h2>
+
+    <!-- Intro -->
+    <section class="section-intro apparition">
+        <span class="etiquette-section">Qui suis-je</span>
+        <h1 class="titre-page">À propos</h1>
+        <p class="sous-titre-page">Développeur full stack en 3e année Bachelor CDA à ITIC Paris</p>
     </section>
 
-    <section class="parcours">
-        <h2>Mon parcours</h2>
-                <p>Après un bac STMG, spécialité SIG (Systèmes d’Information de Gestion),
-                    j’ai choisi de continuer mes études dans le domaine de l’informatique en intégrant un BTS SIO (Services Informatiques aux Organisations),
-                    option SLAM (Solutions Logicielles et Applications Métiers). <br>
-                    Ce cursus m’a permis d’approfondir mes compétences en développement web et logiciel, notamment avec des langages comme PHP et Java, mais aussi en bases de données, gestion de projets, et conception d’applications.<br>
-                    Actuellement en deuxième année, je mets en pratique mes connaissances à travers différents projets scolaires et stages, que je vous invite à découvrir dans ma page <a href="projets.html" target="_blank"  >Projects</a>.
-                </p>
+    <!-- Parcours -->
+    <section class="section-parcours apparition delai-1">
+        <h2 class="titre-section">Mon parcours</h2>
+        <p class="texte-parcours">
+            Après un bac STMG spécialité SIG (Systèmes d'Information de Gestion),
+            j'ai choisi de poursuivre mes études en informatique en intégrant un BTS SIO,
+            option SLAM. Ce cursus m'a permis d'approfondir mes compétences en développement
+            web et logiciel, notamment avec PHP et Java, mais aussi en bases de données,
+            gestion de projets et conception d'applications.<br><br>
+            Actuellement en troisième année, je mets en pratique mes connaissances à travers
+            différents projets scolaires et stages — à découvrir sur ma page
+            <a href="projets.html">Projects</a>.
+        </p>
     </section>
 
+    <!-- Expériences -->
+    <section class="section-experiences">
+        <h2 class="titre-section apparition">Expériences</h2>
 
-    <section class="stage">
-        <h2>Expériences</h2>
+        <div class="grille-stages">
 
-        <div class="stage-container">
+            <!-- Stage 1 -->
+            <div class="carte-stage apparition-gauche delai-1">
+                <h3 class="titre-stage">🧑‍💻 Stage — 1ère année BTS SIO SLAM</h3>
+                <p class="metadonnee-stage"><strong>📅 Période :</strong> Mai – Juin 2024</p>
+                <p class="metadonnee-stage">🏢 Freelance — secteur e-learning</p>
 
-        <div class="stage-card">
-            <h3 class="item-title">🧑‍💻 Stage – 1ère année BTS SIO SLAM</h3>
-            <p class="item-date"><strong><span class="clr-text">📅 Période :</span></strong> Mai – Juin 2024</p>
-            <p class="item-description"><strong><span class="clr-text">🏢 Structure :</span></strong> Freelance – secteur e-learning</p>
-
-
-            <h4>🚀 Missions réalisées :</h4>
-
-            <div class="mission">
-                <ul>
-                    <li>Migration d’une plateforme e-learning (LearnBox → System.io)</li>
-                    <li>Reporting via Power BI</li>
+                <p class="sous-titre-stage">Missions réalisées</p>
+                <ul class="liste-stage">
+                    <li>Migration d'une plateforme e-learning (LearnBox → System.io)</li>
+                    <li>Reporting et analyse de données via Power BI</li>
                 </ul>
+
+                <p class="sous-titre-stage">Compétences mobilisées</p>
+                <div>
+                    <span class="badge-techno">Microsoft Excel</span>
+                    <span class="badge-techno">Power BI</span>
+                    <span class="badge-techno">System.io</span>
+                </div>
             </div>
 
+            <!-- Stage 2 -->
+            <div class="carte-stage apparition-droite delai-2">
+                <h3 class="titre-stage">🧑‍💻 Stage — 2ème année BTS SIO SLAM</h3>
+                <p class="metadonnee-stage"><strong>📅 Période :</strong> Nov – Déc 2024</p>
+                <p class="metadonnee-stage">🏢 ITIC Paris</p>
 
-            <h4>🛠️ Compétences mobilisées :</h4>
-
-            <div class="competence">
-                <ul>
-                    <li> Microsoft Excel</li>
-                    <li> Microsoft Power BI</li>
-                    <li> System.io</li>
+                <p class="sous-titre-stage">Missions réalisées</p>
+                <ul class="liste-stage">
+                    <li>Développement d'une application de gestion scolaire (élèves, classes, notes, professeurs)</li>
+                    <li>Authentification sécurisée multi-profils</li>
                 </ul>
+
+                <p class="sous-titre-stage">Compétences mobilisées</p>
+                <div>
+                    <span class="badge-techno">Java</span>
+                    <span class="badge-techno">Spring Framework</span>
+                </div>
             </div>
+
         </div>
+    </section>
 
-            <div class="stage-card">
-                <h3 class="item-title"><span class="clr-text">🧑‍💻 Stage</span> – 2ème année BTS SIO SLAM</h3>
-                <p class="item-date"><strong><span class="clr-text">📅 Période :</span></strong> Nov – Déc 2024</p>
-                <p class="item-description"><strong><span class="clr-text">🏢 Structure :</span></strong> ITIC Paris</p>
+    <!-- Formations -->
+    <section class="section-formations">
+        <h2 class="titre-section apparition">Formations</h2>
 
-            <h4>🚀 Missions réalisées :</h4>
+        <div class="grille-formations">
 
-            <div class="mission">
-                <ul>
-                    <li> Dév. d’une application de gestion scolaire (élèves, classes, notes, professeurs)</li>
-                    <li>   Authentification sécurisée multi-profils</li>
-
-                </ul>
+            <div class="carte-formation apparition delai-1">
+                <p class="annee-formation">2020 — 2021</p>
+                <h3 class="titre-formation">Baccalauréat Technologique STMG</h3>
+                <p class="ecole-formation">Louise Michel, Bobigny (93)</p>
+                <p class="description-formation">Option : SIG Informatique.</p>
             </div>
 
-
-            <h4>🛠️ Compétences mobilisées :</h4>
-
-            <div class="competence">
-                <ul>
-                    <li> JAVA</li>
-                    <li> Spring (Framework)</li>
-                </ul>
-            </div>
-            </div>
-        </div>
-
-</section>
-
-    <div class="container">
-    <section class="formation">
-        <div class="h2-title">
-            <h2 class="section-title">Formations</h2>
-        </div>
-
-        <div class="formation-card">
-            <!-- Formation Card 1 -->
-            <div class="card formation-card">
-            <div class="card-header">
-                <h3 class="card-title">Baccalauréat Technologie STMG</h3>
-                <p class="card-subtitle school">Louise Michel, Bobigny (93)</p>
-                <p class="card-subtitle period">2020 - 2021</p>
-            </div>
-            <div class="card-content">
-                <p>Option : SIG Informatique.</p>
-            </div>
+            <div class="carte-formation apparition delai-2">
+                <p class="annee-formation">2021 — 2022</p>
+                <h3 class="titre-formation">BTS SIO (Non validé)</h3>
+                <p class="ecole-formation">ORT Montreuil</p>
+                <p class="description-formation">Projet : Application Quiz — PHP, HTML5, CSS, MySQL.</p>
             </div>
 
-
-        <!-- Formation Card 2 -->
-        <div class="card formation-card">
-            <div class="card-header">
-                <h3 class="card-title">BTS SIO (Non Validé)</h3>
-                <p class="card-subtitle school">ORT Montreuil</p>
-                <p class="card-subtitle period">2021-2022</p>
-            </div>
-            <div class="card-content">
-                <p>Projet : Réalisation d'une application QUIZZ, Technologie utilisé : PHP, HTML 5, CSS, MYSQL.</p>
-            </div>
-        </div>
-
-        <!-- Formation Card 3 -->
-        <div class="card formation-card">
-            <div class="card-header">
-                <h3 class="card-title">BTS SIO</h3>
-                <p class="card-subtitle school">ITIC Paris (11)</p>
-                <p class="card-subtitle period">2023 - 2025</p>
-            </div>
-            <div class="card-content">
-                <p>  Projet JAVA – Appli de gestion des employés (M2L) :
-                    Interface graphique + ligne de commande, gestion multi-utilisateurs, admin par ligue</p>
-                <p>Projet Laravel – Intranet M2L :
-                    Connexion utilisateur, interface admin, gestion des employés
+            <div class="carte-formation apparition delai-3">
+                <p class="annee-formation">2023 — 2025</p>
+                <h3 class="titre-formation">BTS SIO SLAM</h3>
+                <p class="ecole-formation">ITIC Paris (11e)</p>
+                <p class="description-formation">
+                    Projet Java — Gestion du personnel M2L (interface graphique + CLI).<br>
+                    Projet Laravel — Intranet M2L (connexion, admin, gestion collaborateurs).
                 </p>
             </div>
-        </div>
+
         </div>
     </section>
-    </div>
 
-
-    <footer>
-        <p>&COPY; Portfolio Harish - Balakirishnan</p>
-    </footer>
 </main>
 
+<footer>
+    <p>&copy; Portfolio Harish Balakirishnan</p>
+</footer>
+
+<script>
+    const observateur = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add('visible');
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.apparition, .apparition-gauche, .apparition-droite')
+        .forEach(el => observateur.observe(el));
+</script>
 </body>
 </html>

@@ -1,253 +1,315 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 @import url("./reset.css");
 
-:root
-{
-    --nav-color: #bfbaba;
-    --bg-color:rgb(53, 64, 90);
-    --text-color:#ffffff;
-    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --primary-light: #3b82f6;
-}
-.header
-{
+/* ─── EN-TÊTE ─── */
+.entete {
     position: fixed;
-    top : 0;
-    left : 0;
+    top: 0; left: 0;
     width: 100%;
-    padding: 20px 10%;
+    padding: 20px 8%;
     display: flex;
-
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(13,17,23,0.85);
+    border-bottom: 1px solid var(--couleur-bordure);
 }
 
-.logo
-{
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--couleur-texte);
+}
+
+.logo span { color: var(--couleur-accent); }
+
+.barre-nav a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--nav-couleur);
+    margin-left: 32px;
+    transition: color var(--transition);
     position: relative;
-    font-size: 25px;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 400;
 }
 
-.logo::before
-{
+.barre-nav a::after {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    animation: defilRight 1s ease forwards;
-    animation-delay: 2s;
+    bottom: -3px; left: 0;
+    width: 0; height: 1px;
+    background: var(--couleur-accent);
+    transition: width var(--transition);
 }
 
+.barre-nav a:hover,
+.barre-nav a.actif { color: var(--couleur-texte); }
 
-.navbar a
-{
-    font-size: 18px;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .2s;
+.barre-nav a:hover::after,
+.barre-nav a.actif::after { width: 100%; }
+
+/* ─── CONTENU PRINCIPAL ─── */
+main {
+    padding-top: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-inline: 8%;
 }
 
-
-.navbar a:hover,
-.navbar a.active
-{
-    color: var(--nav-color);
-
+/* ─── INTRO ─── */
+.section-intro {
+    padding: 5rem 0 3rem;
+    border-bottom: 1px solid var(--couleur-bordure);
+    margin-bottom: 4rem;
 }
 
-.intro {
-    width: 80%;
-    height: 15vh;
-    position: relative;
-    justify-content: space-between;
-    margin: 7% auto 0;
-}
-.intro h1 {
-    font-family: 'Proxima Nova Cn Rg', serif;
-    font-size: 4rem;
-}
-
-.intro h2 {
-    font-weight:400;
-    margin-top: 1.5rem;
-    font-size: 1rem;
-    color: var(--nav-color);
+.etiquette-section {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--couleur-accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
 }
 
-.parcours
-{
-    width: 80%;
-    height: 20vh;
-    position: relative;
-    justify-content: space-between;
-    margin: 6% auto 0;
+.etiquette-section::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--couleur-accent);
 }
 
-.parcours h2
-{
-    font-family: 'Proxima Nova Cn Rg', serif;
-    font-size: 1.875rem;
+.titre-page {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--couleur-texte) 60%, var(--couleur-texte-subtil));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.parcours p {
-    margin-top: 1.5rem;
-    color: var(--nav-color);
-    line-height: 1.7rem;
-}
-.parcours p a {
-    color: white;
+.sous-titre-page {
+    font-size: 1.05rem;
+    color: var(--couleur-texte-subtil);
+    font-weight: 400;
+    line-height: 1.7;
 }
 
-
-.stage {
-    width: 80%;
-    height: 53vh;
-    position: relative;
-    justify-content: space-between;
-    margin: 4% auto 0;
-
-}
-
-.stage-container{
-    display: flex;
-    justify-content: space-between;
-    gap:20px;
-}
-
-.stage h2 {
-    font-family: 'Proxima Nova Cn Rg', serif;
-    font-size: 1.875rem;
-    margin-bottom: 1.5rem;
-}
-
-.stage .stage-card
-{
-    width: 48%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    color: var(--nav-color);
-}
-
-
-.stage h4 {
-    margin-bottom: 1.5rem;
-    margin-top: 1.3rem;
-    font-size: 1.1rem;
-    color: var(--text-color);
-}
-
-.mission {
-
-    margin-left: 3rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.7rem;
-    color: var(--nav-color);
-}
-
-.competence {
-    margin-left: 3rem;
-    line-height: 1.7rem;
-    color: var(--nav-color);
-}
-
-.item-title {
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: var(--text-color);
-}
-.clr-text {
-    color: var(--text-color);
-}
-
-.item-date {
-    margin-bottom: 5px;
-}
-
-.item-description {
-    margin-bottom: 10px;
-}
-
-.container {
-    width: 80%;
-    margin: 4% auto 0;
-}
-
-.formation{
-
+/* ─── PARCOURS ─── */
+.section-parcours {
     margin-bottom: 5rem;
 }
 
-.section-title {
-    font-size: 1.875rem;
-    font-family: 'Proxima Nova Cn Rg', serif;
-    margin-bottom: 1.5rem;
-
-}
-
-.h2-title{
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-}
-
-.formation-card {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1.5rem;
-    color: var(--bg-color);
-}
-
-.card {
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: var(--card-shadow);
-    height: 100%;
-    transition: box-shadow 0.3s ease;
-}
-
-.card:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.card-header {
-    padding: 1.5rem 1.5rem 0;
-}
-
-.card-content {
-    padding: 1.5rem;
-}
-
-.card-title {
-    font-size: 1.25rem;
+.titre-section {
+    font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
 }
 
-.card-subtitle {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
+.titre-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 40px; height: 2px;
+    background: var(--couleur-accent);
+    transition: width 0.4s ease;
 }
 
-.card-subtitle.school {
-    font-weight: 500;
+.section-parcours:hover .titre-section::after,
+.section-experiences:hover .titre-section::after { width: 100px; }
+
+.texte-parcours {
+    color: var(--couleur-texte-subtil);
+    line-height: 1.85;
+    font-size: 0.98rem;
 }
 
-.card-subtitle.period {
-    color: var(--primary-light);
+.texte-parcours a {
+    color: var(--couleur-accent);
+    transition: opacity var(--transition);
+}
+.texte-parcours a:hover { opacity: 0.8; }
+
+/* ─── EXPÉRIENCES ─── */
+.section-experiences {
+    margin-bottom: 5rem;
+}
+
+.grille-stages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 2rem;
+}
+
+.carte-stage {
+    background: var(--couleur-surface);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+    padding: 28px;
+    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.carte-stage::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(180deg, var(--couleur-accent), var(--couleur-accent-violet));
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.carte-stage:hover {
+    border-color: rgba(79,142,247,0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.carte-stage:hover::before { opacity: 1; }
+
+.titre-stage {
+    font-size: 1.05rem;
     font-weight: 600;
+    color: var(--couleur-texte);
+    margin-bottom: 10px;
 }
 
-footer * {
-    text-align: center;
+.metadonnee-stage {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--couleur-texte-subtil);
+    margin-bottom: 4px;
+}
 
+.metadonnee-stage strong { color: var(--couleur-accent); }
+
+.sous-titre-stage {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--couleur-texte);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.liste-stage {
+    list-style: none;
+}
+
+.liste-stage li {
+    font-size: 0.88rem;
+    color: var(--couleur-texte-subtil);
+    padding: 4px 0;
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.liste-stage li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--couleur-accent);
+    font-size: 0.7rem;
+    top: 5px;
+}
+
+/* ─── COMPÉTENCES TECHNIQUES (badges) ─── */
+.badge-techno {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(79,142,247,0.1);
+    border: 1px solid rgba(79,142,247,0.25);
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--couleur-accent);
+    margin: 3px 2px 0;
+}
+
+/* ─── FORMATIONS ─── */
+.section-formations {
+    margin-bottom: 6rem;
+}
+
+.grille-formations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.carte-formation {
+    background: var(--couleur-surface);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+    padding: 28px;
+    transition: border-color var(--transition), transform var(--transition);
+    position: relative;
+}
+
+.carte-formation:hover {
+    border-color: rgba(167,139,250,0.4);
+    transform: translateY(-3px);
+}
+
+.annee-formation {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--couleur-accent-violet);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.titre-formation {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--couleur-texte);
+    margin-bottom: 6px;
+}
+
+.ecole-formation {
+    font-size: 0.88rem;
+    color: var(--couleur-texte-subtil);
+    margin-bottom: 14px;
+}
+
+.description-formation {
+    font-size: 0.85rem;
+    color: var(--couleur-texte-subtil);
+    line-height: 1.6;
+    padding-top: 14px;
+    border-top: 1px solid var(--couleur-bordure);
+}
+
+/* ─── PIED DE PAGE ─── */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--couleur-texte-subtil);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--couleur-bordure);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+    .grille-stages { grid-template-columns: 1fr; }
+    main { padding-inline: 5%; }
 }
