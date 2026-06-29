@@ -1,62 +1,84 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact — Harish Balakirishnan">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
-    <link rel="stylesheet" href="css/contact.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Portfolio ~ Harish </title>
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Contact ~ Harish B.</title>
 </head>
 <body>
 
-<header class="header">
-    <a href="index.html"  class="logo"> Harish B.</a>
-
-    <nav class="navbar">
+<header class="entete">
+    <a href="index.html" class="logo">Harish<span>.</span></a>
+    <nav class="barre-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projets.html">Projects</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="actif">Contact</a>
     </nav>
 </header>
 
 <main>
-    <section>
-        <h1>Contactez moi via mes différents réseaux sociaux ou par email : </h1>
-    </section>
+    <div class="section-contact-titre apparition">
+        <span class="etiquette-section">Discutons ensemble</span>
+        <h1 class="titre-contact">Me contacter</h1>
+        <p class="description-contact">
+            Disponible pour des opportunités de stage, des collaborations ou simplement pour échanger.
+        </p>
+    </div>
 
-    <section class="home-icon">
+    <div class="grille-contact">
 
-        <div class="linkedin">
-            <a href="https://www.linkedin.com/in/harish-balakirishnan-20aa38211/" target="_blank" ><i class='bx bxl-linkedin-square' ></i>
-            </a>
-            <p>Linkedin</p>
-        </div>
+        <a href="https://www.linkedin.com/in/harish-balakirishnan-20aa38211/"
+           target="_blank"
+           class="carte-contact linkedin apparition delai-1">
+            <i class='bx bxl-linkedin-square icone-contact'></i>
+            <span class="nom-reseau">LinkedIn</span>
+            <span class="handle-reseau">harish-balakirishnan</span>
+        </a>
 
-        <div class="linkedin">
-            <a href="mailto:balaharish585@gmail.com" target="_blank" ><i class='bx bxl-gmail' ></i></a>
-            <p class="mail">Mail</p>
-        </div>
+        <a href="mailto:balaharish585@gmail.com"
+           class="carte-contact email apparition delai-2">
+            <i class='bx bxl-gmail icone-contact'></i>
+            <span class="nom-reseau">Email</span>
+            <span class="handle-reseau">balaharish585@gmail.com</span>
+        </a>
 
-        <div class="linkedin">
-            <a href="https://www.instagram.com/harishh.3" target="_blank" ><i class='bx bxl-instagram'></i></a>
-            <p class="instagram">Instagram</p>
-        </div>
+        <a href="https://www.instagram.com/harishh.3"
+           target="_blank"
+           class="carte-contact instagram apparition delai-3">
+            <i class='bx bxl-instagram icone-contact'></i>
+            <span class="nom-reseau">Instagram</span>
+            <span class="handle-reseau">@harishh.3</span>
+        </a>
 
+    </div>
 
-    </section>
-
-    <footer>
-    <p>&COPY; Portfolio Harish - Balakirishnan</p>
-</footer>
+    <div class="separateur-contact"></div>
+    <p class="texte-email-direct">
+        Ou directement par email : <a href="mailto:balaharish585@gmail.com">balaharish585@gmail.com</a>
+    </p>
 </main>
 
+<footer>
+    <p>&copy; Portfolio Harish Balakirishnan</p>
+</footer>
 
+<script>
+    const observateur = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add('visible');
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.apparition, .apparition-gauche, .apparition-droite')
+        .forEach(el => observateur.observe(el));
+</script>
 </body>
 </html>

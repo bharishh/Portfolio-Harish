@@ -1,139 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 @import url("./reset.css");
 
-:root
-{
-    --nav-color:#AAA7A7;
-    --bg-color:rgb(53, 64, 90);
-    --h3-color : rgb(96, 145, 239);
-    --text-color:#ffffff;
-}
-.header
-{
+/* ─── EN-TÊTE ─── */
+.entete {
     position: fixed;
-    top : 0;
-    left : 0;
+    top: 0; left: 0;
     width: 100%;
-    padding: 20px 10%;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    backdrop-filter: blur(12px);
+    background: rgba(13,17,23,0.85);
+    border-bottom: 1px solid var(--couleur-bordure);
 }
 
-.logo
-{
-    position: relative;
-    font-size: 25px;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 400;
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--couleur-texte);
 }
 
-.logo::before
-{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    animation: defilRight 1s ease forwards;
-    animation-delay: .4s;
-}
+.logo span { color: var(--couleur-accent); }
 
-
-.navbar a
-{
-    font-size: 18px;
-    color: var(--text-color);
-    text-decoration: none;
+.barre-nav a {
+    font-size: 0.9rem;
     font-weight: 500;
-    margin-left: 35px;
-    transition: .2s;
-}
-
-
-.navbar a:hover,
-.navbar a.active
-{
-    color: var(--nav-color);
-
-}
-
-
-section h1{
-    position: absolute;
-    top: 11rem;
-    left: 10rem;
-    font-size: 2rem;
-
-}
-.home-icon{
-    position: absolute;
-    width: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% ,-50%);
-    display: flex;
-    justify-content: space-between;
-
-}
-.home-icon a {
+    color: var(--nav-couleur);
+    margin-left: 32px;
+    transition: color var(--transition);
     position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    height: 70px;
-    background: transparent;
-    border: 2px solid var(--h3-color);
-    border-radius: 70%;
-    font-size: 40px;
-    color: var(--h3-color);
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
 }
 
-.home-icon a span {
-    .icones figure a span{
-        margin-left: 10px;
-        font-weight: 500;
-    }
-}
-
-.home-icon a:hover{
-    color: black;
-}
-.home-icon a::before {
+.barre-nav a::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: -1;
-    transition: .5s;
-    background: var(--h3-color);
+    bottom: -3px; left: 0;
+    width: 0; height: 1px;
+    background: var(--couleur-accent);
+    transition: width var(--transition);
+}
 
-}
-.home-icon a:hover::before {
-    width: 100%;
-}
-.linkedin {
+.barre-nav a:hover, .barre-nav a.actif { color: var(--couleur-texte); }
+.barre-nav a:hover::after, .barre-nav a.actif::after { width: 100%; }
+
+/* ─── PAGE CONTACT ─── */
+main {
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    padding: 8rem 8% 4rem;
+    text-align: center;
 }
 
-.linkedin p {
-    font-size: 1.3rem;
+.section-contact-titre {
+    margin-bottom: 4rem;
 }
+
+.etiquette-section {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--couleur-accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+.etiquette-section::before {
+    content: '';
+    width: 20px; height: 1px;
+    background: var(--couleur-accent);
+}
+
+.titre-contact {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+
+.description-contact {
+    font-size: 1rem;
+    color: var(--couleur-texte-subtil);
+    max-width: 460px;
+    line-height: 1.7;
+}
+
+/* ─── GRILLE LIENS SOCIAUX ─── */
+.grille-contact {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carte-contact {
+    background: var(--couleur-surface);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: var(--rayon);
+    padding: 32px 28px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--couleur-texte);
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.carte-contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-contact, linear-gradient(135deg, rgba(79,142,247,0.08), transparent));
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.carte-contact:hover::before { opacity: 1; }
+
+.carte-contact:hover {
+    transform: translateY(-6px);
+    border-color: var(--couleur-accent-carte, var(--couleur-accent));
+    box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+
+.carte-contact.linkedin { --couleur-accent-carte: #0A66C2; --gradient-contact: linear-gradient(135deg, rgba(10,102,194,0.12), transparent); }
+.carte-contact.email { --couleur-accent-carte: #EA4335; --gradient-contact: linear-gradient(135deg, rgba(234,67,53,0.12), transparent); }
+.carte-contact.instagram { --couleur-accent-carte: #E4405F; --gradient-contact: linear-gradient(135deg, rgba(228,64,95,0.12), transparent); }
+
+.icone-contact {
+    font-size: 2.5rem;
+    transition: transform var(--transition);
+    color: var(--couleur-texte-subtil);
+}
+
+.carte-contact:hover .icone-contact {
+    transform: scale(1.15);
+    color: var(--couleur-accent-carte, var(--couleur-accent));
+}
+
+.nom-reseau {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.handle-reseau {
+    font-size: 0.78rem;
+    color: var(--couleur-texte-subtil);
+}
+
+/* Séparateur */
+.separateur-contact {
+    width: 60px;
+    height: 1px;
+    background: var(--couleur-bordure);
+    margin: 3rem auto;
+}
+
+.texte-email-direct {
+    font-size: 0.9rem;
+    color: var(--couleur-texte-subtil);
+}
+
+.texte-email-direct a {
+    color: var(--couleur-accent);
+    transition: opacity var(--transition);
+}
+
+.texte-email-direct a:hover { opacity: 0.75; }
+
+/* ─── PIED DE PAGE ─── */
 footer {
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
     width: 100%;
-    bottom: 0;
+    text-align: center;
+    padding: 2rem;
+    color: var(--couleur-texte-subtil);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--couleur-bordure);
 }

@@ -1,84 +1,131 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projet Java — M2L Gestion du personnel">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/site.webmanifest">
     <link rel="stylesheet" href="css/projetjava.css">
-    <title>Projet Java-E6</title>
+    <title>Projet Java — M2L</title>
 </head>
 <body>
+
 <main>
-    <h1>M2L - Application de Gestion du Personnel</h1>
 
+    <div class="entete-projet apparition">
+        <span class="etiquette-section">Projet E5 — Java</span>
+        <h1 class="titre-projet-page">M2L — Application de Gestion du Personnel</h1>
 
-    <div class="objectiveProjet">
-        <p>Le projet M2L vise à fournir une application pour gérer les employés des ligues.
-            L'application permet de réaliser des tâches administratives par ligue, telles que l'enregistrement des employés.
-            Le projet est structuré autour d'un modèle conceptuel de
-            données (MCD) pour assurer une gestion efficace et organisée des informations.</p>
+        <div class="objectif-projet">
+            <p>
+                Le projet M2L vise à fournir une application pour gérer les employés des ligues.
+                Elle permet de réaliser des tâches administratives par ligue : enregistrement des employés,
+                gestion des accès et attribution des rôles. Le projet est structuré autour d'un MCD
+                pour une gestion efficace et organisée des données.
+            </p>
+        </div>
     </div>
 
-<div class="projet">
+    <!-- Galerie -->
+    <div class="galerie-projet">
 
-    <div class="projet-img">
-        <img src="asset/MCDProjetE5.png" alt="Projet 1" class="zoomable">
-        <h3>Description :</h3>
-        <p > Ce diagramme représente une structure de base de données relationnelle avec deux entités principales : "Employé" et "Ligue".
-         Relation : Un employé peut appartenir à un ou plusieurs ligues (relation 0,N avec l'entité "Ligue").</p>
-    </div>
+        <div class="element-galerie apparition delai-1">
+            <div class="conteneur-image-galerie">
+                <img src="asset/MCDProjetE5.png" alt="MCD Projet E5" class="image-galerie zoomable">
+            </div>
+            <div class="legende-galerie">
+                <h3>Modèle Conceptuel de Données</h3>
+                <p>Structure relationnelle avec deux entités principales : Employé et Ligue. Un employé peut appartenir à une ou plusieurs ligues.</p>
+            </div>
+        </div>
 
-    <div class="projet-img">
-        <img src="asset/arbreHeuristique.png" alt="Projet 2" class="zoomable">
-        <h3>Description :</h3>
-        <p >Arbre heuristique un outil utilisé pour visualiser les décisions et les chemins possibles dans un projet.
-            Cet outil peut également servir de documentation pour expliquer le raisonnement derrière les décisions prises dans le projet.
-        </p>
-    </div>
+        <div class="element-galerie apparition delai-2">
+            <div class="conteneur-image-galerie">
+                <img src="asset/arbreHeuristique.png" alt="Arbre heuristique" class="image-galerie zoomable">
+            </div>
+            <div class="legende-galerie">
+                <h3>Arbre Heuristique</h3>
+                <p>Outil de visualisation des décisions et chemins possibles dans le projet. Sert aussi de documentation pour expliciter le raisonnement.</p>
+            </div>
+        </div>
 
-    <div class="projet-img">
-        <img src="asset/consoleProjetE5.png" alt="Projet 3" class="zoomable">
-        <h3>Description :</h3>
-        <p> interface en ligne de commande (CLI) de l'application M2L, spécifiquement pour la gestion des ligues et des employés.
-            Les options permettent d'afficher, d'ajouter, de modifier et de supprimer des ligues et des employés, offrant ainsi un contrôle complet sur les données de l'application.
-        </p>
-    </div> 
-
-
-</div>
-
-    <div class="modifications-list ">
-        <h1>Modification</h1>
-        <ul>
-            <h2>Editer une ligue</h2>
-            <li>Changer Admin</li>
-            <li>Retirer Admin</li>
-
-
-            <h2>Gestion de l'employé : </h2>
-            <li>Quand on ajoute un employé : saisir la Date inscription</li>
-            <li>Selectionne un employe : on peut Modifier ou supprimer l'employé</li>
-            <li>Exception date invalide ( futur ou passé ) </li>
-
-        </ul>
+        <div class="element-galerie apparition delai-3">
+            <div class="conteneur-image-galerie">
+                <img src="asset/consoleProjetE5.png" alt="Interface console" class="image-galerie zoomable">
+            </div>
+            <div class="legende-galerie">
+                <h3>Interface CLI</h3>
+                <p>Interface en ligne de commande de l'application M2L pour la gestion des ligues et des employés. CRUD complet sur les données.</p>
+            </div>
+        </div>
 
     </div>
 
+    <!-- Modifications -->
+    <div class="section-modifications apparition">
+        <h2 class="titre-modifications">Modifications apportées</h2>
+
+        <div class="groupe-modification">
+            <p class="sous-titre-modification">Gestion des ligues</p>
+            <ul class="liste-modifications">
+                <li>Changer l'administrateur d'une ligue</li>
+                <li>Retirer le rôle administrateur</li>
+            </ul>
+        </div>
+
+        <div class="groupe-modification">
+            <p class="sous-titre-modification">Gestion des employés</p>
+            <ul class="liste-modifications">
+                <li>Saisie de la date d'inscription lors de l'ajout d'un employé</li>
+                <li>Sélection d'un employé : possibilité de modifier ou supprimer</li>
+                <li>Gestion des exceptions pour date invalide (future ou trop ancienne)</li>
+            </ul>
+        </div>
+    </div>
 
 </main>
 
-<!-- Conteneur pour afficher l'image zoomée -->
-<div id="zoomContainer">
-    <span id="closeZoom">&times;</span>
-    <img id="zoomedImage" src="" alt="Zoomed">
+<!-- Modal zoom -->
+<div class="conteneur-zoom" id="conteneurZoom">
+    <span class="fermer-zoom" id="fermerZoom">&times;</span>
+    <img class="image-zoomee" id="imageZoomee" src="" alt="Image agrandie">
 </div>
 
-<script src="js/imgConsole.js"></script>
+<script>
+    // Zoom sur images
+    const zoomables = document.querySelectorAll('.zoomable');
+    const modal = document.getElementById('conteneurZoom');
+    const imgZoomee = document.getElementById('imageZoomee');
+    const btnFermer = document.getElementById('fermerZoom');
 
+    zoomables.forEach(img => {
+        img.addEventListener('click', () => {
+            imgZoomee.src = img.src;
+            imgZoomee.alt = img.alt;
+            modal.classList.add('actif');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function fermerModal() {
+        modal.classList.remove('actif');
+        document.body.style.overflow = '';
+    }
+
+    btnFermer.addEventListener('click', fermerModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) fermerModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fermerModal(); });
+
+    // Apparitions au scroll
+    const observateur = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.apparition, .apparition-gauche, .apparition-droite')
+        .forEach(el => observateur.observe(el));
+</script>
 </body>
 </html>
